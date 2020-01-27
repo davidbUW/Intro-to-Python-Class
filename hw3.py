@@ -1,5 +1,5 @@
-newlist = "-"
-newlist = list(newlist)
+evenlist = "-"
+evenlist = list(evenlist)
 oddlist = "-"
 oddlist = list(oddlist)
 
@@ -13,17 +13,16 @@ def number_program():
             print("ERROR: Ending number greater than 5 times starting number")
         else:
             for x in range(start,end+1,1):
-                newlist.append(x)
-            del newlist[0]
-            for index, number in enumerate(newlist):
+                evenlist.append(x)
+            del evenlist[0]
+            for index, number in enumerate(evenlist):
                 if number % 2 == 0:
                     print("{} [{}]".format(number, str(index)))
-            for y in range(start,end+1,1): #consider using else for this function
-                if y % 2 > 0:
-                    oddlist.append(y)
+                else:
+                    oddlist.append(number)
             del oddlist[0]
             total = sum(oddlist)
-            print(total)
+            print("The sum of odd numbers is",total)
             break
 number_program()
 
